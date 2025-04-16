@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header__container">
+            <img src="./img/creative_design_brain_light_lightbulb_idea_brainstorm_icon_193929.svg">
+            <button class="header__exit">Выход</button>
+        </div>
+    </header>
+    <section class="start-game">
+        <div class="container start-game__container">
+            <button class="start-game__btn">
+                Начать игру
+            </button>
+        </div>
+    </section>
+    <section class="game">
+        <div class="container game__container">
+            <button class="game__next-btn">Следующий вопрос</button>
+            <div class="game__questions"></div>
+            
+            <p class="game__pl-text">Ответ записывается здесь:</p>
+            <div class="placeholder"></div>
+
+            <div class="game__btns">
+                <button class="item" id="btn-fr" draggable="true">Франция</button>
+                <button class="item" id="btn-rf" draggable="true">Россия</button>
+                <button class="item" id="btn-am" draggable="true">Америка</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
