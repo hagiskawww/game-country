@@ -8,6 +8,10 @@ const btns = document.querySelectorAll('.item');
 const placeholder = document.querySelector('.placeholder');
 const questionsText = document.querySelector('.game__questions');
 
+const sectionModal = document.querySelector('.modal');
+const modalTitle = document.querySelector('.modal__title');
+const modalBtn = document.querySelector('.modal__btn');
+
 exitBtn.addEventListener('click', () => {
     sectionGame.style.display = 'none';
     startBtn.style.display = 'block';
@@ -90,14 +94,22 @@ placeholder.addEventListener('drop', (e) => {
     }
 
     if (draggedAnswer === currentQuestion.answer) {
-        alert('✅ Правильно!');
+        sectionModal.style.display = 'flex';
+        modalTitle.textContent = 'Правильно!'
     } else {
-        alert('❌ Неправильно. Попробуй ещё раз!');
+        sectionModal.style.display = 'flex';
+        modalTitle.textContent = 'Неправильно. Попробуй ещё раз!'
     }
 });
 
+
+
 nextBtn.addEventListener('click', () => {
     showQuestion();
+})
+
+modalBtn.addEventListener('click', () => {
+    window.location.reload(true);
 })
 
 function showQuestion() {

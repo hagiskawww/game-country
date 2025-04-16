@@ -178,6 +178,68 @@ header {
     transition: background-color 0.2s ease;
 }
 
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* полупрозрачный фон */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal__container {
+    background-color: #1f1f1f;         /* тёмный фон */
+    border: 2px solid #ff69b4;         /* розовая окантовка */
+    border-radius: 16px;
+    padding: 32px 24px;
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(255, 105, 180, 0.3);
+    color: white;
+}
+
+.modal__title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.modal__btn,
+.modal__exit {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.modal__btn {
+    background-color: #ff69b4;
+    color: #fff;
+}
+
+.modal__btn:hover {
+    background-color: #ff4fa2;
+}
+
+.modal__exit {
+    background-color: #2a2a2a;
+    color: #ff69b4;
+    border: 1px solid #ff69b4;
+}
+
+.modal__exit:hover {
+    background-color: #3a3a3a;
+}
+
+
 /* Адаптивность */
 
 /* Для экранов до 768px */
